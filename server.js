@@ -4,9 +4,14 @@ if (process.env.NODE_ENV !== 'production') {
     require ('dotenv').config();
 };
 
+
+
 const DARKSKY_API_KEY = process.env.DARKSKY_API_KEY;
 const express = require('express');
 const app = express();
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, ()=> console.log(`Server running on port ${PORT}`));
 
 app.use(express.json());
 app.use(express.static('public'));
@@ -19,4 +24,3 @@ app.post('/weather', (req, res) => {
     }).then(data => res.json(data.data));
   });
 
-app.listen(process.env.PORT || 3000, ()=> console.log('Server running'));
