@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-size: 15px;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(./images/bg.jpg);
+    background-position: center;
+    background-size: inherit;
+    background-repeat: no-repeat;
+    color: white;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'montserrat', sans-serif;
+}
+
+.container {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:rgba(0,0,0,0.85);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.darksky-logo {
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.header h1 {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.general-information {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+.detail-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    margin: 30px 0;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 10px;
+    padding: 15px;
+}
+
+.detail .title {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.detail .value {
+    font-size: 25px;
+    font-weight: bold;
+}
+.bordered {
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+@media only screen and (max-width: 670px){
+    body {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container {
+        width: 90%;
+        height: 90%;
+    }
+    .header h1 {
+        font-size: 20px;
+    }
+    .general-information {
+        font-size: 25px;
+    }
+    .detail-section {
+        grid-template-columns: 1fr;
+    }
+    .darksky-logo {
+        color: white;
+        font-size: 10px;
+        bottom: 2%;
+    }
+    #icon{
+        width: 80px;
+        height: 80px;
+    }
+    .detail .title {
+        font-size: 15px;
+    }
+    .detail .value {
+        font-size: 20px;
+    }
+    .bordered {
+        border-left: none;
+        border-right: none;
+        border-top:1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+}
